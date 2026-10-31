@@ -34,9 +34,13 @@ Quali sono i file principali?
 Di seguito viene illustrata la struttura organizzativa della repository GitHub e il ruolo di ciascun file e cartella del progetto:
 
 index.html---->Homepage e introduzione metodologica al progetto
+
 catalogo.html---->Pagina principale del catalogo con la griglia dei 12 item
+
 luoghi.html---->Sezione geografica con mappa interattiva Leaflet
+
 date.html---->Sezione cronologica con la linea del tempo degli eventi
+
 README.md---->Documentazione e guida al progetto (questo file)
 
 css/style.css---->Foglio di stile personalizzato del sito web
