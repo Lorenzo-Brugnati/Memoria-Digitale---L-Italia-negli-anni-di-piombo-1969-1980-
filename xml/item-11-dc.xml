@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+
+  <dc:title>Omicidio Aldo Moro</dc:title>
+  <dc:creator>Cronache di un sequestro</dc:creator>
+  <dc:subject>Rapimento e omicidio di Aldo Moro</dc:subject>
+  <dc:subject>Omicidio</dc:subject>
+  <dc:subject>Via Caetani</dc:subject>
+  <dc:subject>Renault 4 rossa</dc:subject>
+  <dc:subject>cinquantacinque giorni</dc:subject>
+  <dc:description>Documentario pubblicato da RepTV ma facente parte della webseries "Cronache di un sequestro" che ricostruisce i 55 giorni di prigionia di Aldo Moro</dc:description>
+  <dc:publisher>RepTV</dc:publisher>
+  <dc:contributor>Archivio de La Repubblica</dc:contributor>
+  <dc:date>23 settembre 2025</dc:date>
+  <dc:type>MovingImage</dc:type>
+  <dc:format>video/mp4</dc:format>
+  <dc:identifier>https://youtu.be/vHxwFqRkoxc</dc:identifier>
+  <dc:source>Youtube-La Repubblica</dc:source>
+  <dc:language>ita</dc:language>
+  <dc:coverage>Roma, Italia</dc:coverage>
+  <dc:rights>Tutti i diritti riservati agli eredi o agli aventi diritto delle rispettive testate giornalistiche. Riproduzione ad uso esclusivamente didattico e scientifico (Art. 70 L. 633/1941).</dc:rights>
+
+  <dcterms:references>http://viaf.org/viaf/37220889</dcterms:references>
+  <dcterms:spatial>https://www.geonames.org/3169070/rome.html</dcterms:spatial>
+</metadata>

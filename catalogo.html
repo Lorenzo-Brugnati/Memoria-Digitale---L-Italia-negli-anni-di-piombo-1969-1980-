@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Completo | Memoria Digitale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+</head>
+<body>
+
+    <!-- STICKY HEADER CON INTESTAZIONE E TRIGGER CURTAIN NAVBAR -->
+    <header class="curtain-header sticky-top border-bottom border-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold text-warning m-0 text-wrap" href="index.html" style="max-width: 80%;">
+                <i class="fa-solid fa-landmark me-2"></i>Memoria Digitale | L'Italia negli anni di piombo (1969-1980)
+            </a>
+            <button class="btn btn-outline-warning" onclick="openNav()" aria-label="Apri Menu">
+                <i class="fa-solid fa-bars fa-lg me-1"></i> Menu
+            </button>
+        </div>
+    </header>
+
+    <!-- STRUTTURA CURTAIN OVERLAY -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <div class="overlay-content">
+            <a href="index.html" onclick="closeNav()"><i class="fa-solid fa-house me-2"></i>Home</a>
+            <a href="index.html" onclick="closeNav()"><i class="fa-solid fa-book-open me-2"></i>Introduzione</a>
+            
+            <div class="curtain-divider"></div>
+            
+            <span class="text-warning text-uppercase small fw-bold tracking-wide">Catalogo & Esplora</span>
+            <a class="active curtain-subitem" href="catalogo.html" onclick="closeNav()"><i class="fa-solid fa-boxes-stacked me-2"></i>Tutti gli Item</a>
+            <a href="luoghi.html" class="curtain-subitem" onclick="closeNav()"><i class="fa-solid fa-map-location-dot me-2"></i>Mappa</a>
+            <a href="date.html" class="curtain-subitem" onclick="closeNav()"><i class="fa-solid fa-timeline me-2"></i>Cronologia</a>
+            
+            <div class="curtain-divider"></div>
+
+            <a href="#" onclick="closeNav()"><i class="fa-solid fa-users me-2"></i>Persone</a>
+            <a href="#" onclick="closeNav()"><i class="fa-solid fa-tags me-2"></i>Temi</a>
+        </div>
+    </div>
+
+    <main class="container my-5">
+        <h1 class="fw-bold mb-4">Catalogo</h1>
+        
+        <!-- Barra dei Filtri per Categoria -->
+        <div class="bg-light p-3 rounded mb-4 shadow-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>
+                <strong class="me-2">Filtra per Tipo:</strong>
+                <button class="btn btn-dark btn-sm me-1">Tutti (12)</button>
+                <button class="btn btn-outline-secondary btn-sm me-1">Testi</button>
+                <button class="btn btn-outline-secondary btn-sm me-1">Immagini</button>
+                <button class="btn btn-outline-secondary btn-sm me-1">Audio/Video</button>
+            </div>
+        <!--bootstrap 4-->
+            <div>
+                <input type="text" class="form-control form-control-sm" placeholder="Cerca nel catalogo...">
+            </div>
+        </div>
+
+        <!-- Griglia di Card degli Item -->
+        <div class="row g-4">
+            <!-- Item 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/Anni_di_piombo2.jpg" class="card-img-top" alt="Piazza Fontana">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="item-1.html" class="text-decoration-none text-dark">Strage di Piazza Fontana</a></h5>
+                        <p class="card-text text-muted small">La strage di piazza Fontana fu un attentato terroristico, di matrice neofascista, compiuto il 12 dicembre 1969 nel centro di Milano, all'interno della sede della Banca Nazionale dell'Agricoltura in piazza Fontana, che causò 17 morti e 88 feriti. È considerata la <em>madre di tutte le stragi</em>, il <em>primo</em> e <em>più dirompente atto terroristico dal dopoguerra</em>, il <em>momento più incandescente della strategia della tensione</em> ed è ritenuta da alcuni l'inizio del periodo passato alla storia in Italia come anni di piombo.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1969 | Milano</small>
+                        <a href="catalogoItem/item-1.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/Gioia_tauro.jpg" class="card-img-top" alt="Gioia Tauro">
+                    <div class="card-body">
+                        <h5 class="card-title">Strage di Gioia Tauro</h5>
+                        <p class="card-text text-muted small">La strage di Gioia Tauro è stato un attentato terroristico di matrice neofascista compiuto il 22 luglio 1970 nei pressi della Stazione di Gioia Tauro. In esso venne causato il deragliamento del direttissimo Treno del sole (Siracusa-Torino Porta Nuova). La sentenza della corte d'assise di Palmi n 3/96 del 27 febbraio 2001 individuò come responsabili tre esponenti di Avanguardia Nazionale: Vito Silverini, Vincenzo Caracciolo e Giuseppe Scarcella. Le cause non vennero mai accertate.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1970 | Gioia Tauro (RC)</small>
+                        <a href="catalogoItem/item-2.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/Golpe_borghese.jpg" class="card-img-top" alt="Golpe Borghese">
+                    <div class="card-body">
+                        <h5 class="card-title">Golpe Borghese</h5>
+                        <p class="card-text text-muted small">Il golpe Borghese fu un tentato colpo di Stato avvenuto in Italia durante la notte tra il 7 e l'8 dicembre 1970 e organizzato da Junio Valerio Borghese, fondatore di Fronte Nazionale, in collaborazione con Avanguardia Nazionale. 
+                        Il golpe fu annullato dallo stesso Borghese mentre era in corso di esecuzione, per motivi mai chiariti. Per evitare l'arresto, Borghese si rifugiò in Spagna dove rimase fino alla morte, avvenuta a Cadice il 26 agosto 1974, senza mai più rientrare in Italia benché l'ordine di cattura spiccato nei suoi confronti dalla magistratura italiana fosse stato revocato nel 1973.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1970 | Roma</small>
+                        <a href="catalogoItem/item-3.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/Luigi_calabresi.jpg" class="card-img-top" alt="Omicidio Calabresi">
+                    <div class="card-body">
+                        <h5 class="card-title">Omicidio Luigi Calabresi</h5>
+                        <p class="card-text text-muted small">L'omicidio Calabresi è il nome con cui i mass media sono soliti riferirsi all'assassinio del commissario di polizia e addetto all'ufficio politico della questura di Milano, Luigi Calabresi, avvenuto il 17 maggio 1972 dinanzi alla sua abitazione per mano di un commando di due militanti di Lotta Continua a colpi di arma da fuoco.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1972 | Milano</small>
+                        <a href="catalogoItem/item-4.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/Peteano.jpg" class="card-img-top" alt="Strage di Peteano">
+                    <div class="card-body">
+                        <h5 class="card-title">Strage di Peteano</h5>
+                        <p class="card-text text-muted small">La strage di Peteano è stata un atto terroristico di matrice politica di estrema destra commesso il 31 maggio 1972 in località Peteano, una frazione di Sagrado (GO) che provocò la morte di tre carabinieri e il ferimento di altri due. I cinque militari vennero attirati a controllare un'automobile sospetta che si rivelò essere un'autobomba che esplose quando si tentò di aprire lo sportello a cui il suo innesco era collegato.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1972 | Peteano (GO)</small>
+                        <a href="catalogoItem/item-5.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/strage_questura_milano.jpg" class="card-img-top" alt="Strage della questura di Milano">
+                    <div class="card-body">
+                        <h5 class="card-title">Strage della Questura di Milano</h5>
+                        <p class="card-text text-muted small">Alle 11:00 del mattino del 17 maggio 1973, in via Fatebenefratelli, davanti alla Questura di Milano, mentre si svolgeva la cerimonia in memoria del commissario Luigi Calabresi ucciso un anno prima, dopo che il Ministro dell'interno Mariano Rumor aveva scoperto il busto dedicato al funzionario ed era andato via in auto, un grosso ordigno esplose in mezzo alla folla di persone ancora riunite per la celebrazione. L'effetto della deflagrazione fu devastante: 4 persone morirono e 52 rimasero ferite. Solo dopo si scoprirà che lo scoppio era stato causato da una bomba a mano.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1973 | Milano</small>
+                        <a href="catalogoItem/item-6.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/piazza_della_loggia.jpg" class="card-img-top" alt="Strage di Piazza della Loggia">
+                    <div class="card-body">
+                        <h5 class="card-title">Strage di Piazza della Loggia</h5>
+                        <p class="card-text text-muted small">La strage di piazza della Loggia è stato un attentato terroristico di matrice neofascista con collaborazioni da parte di membri dello Stato italiano dell'epoca e dei servizi segreti italiani, compiuto il 28 maggio 1974 a Brescia, nella centrale piazza della Loggia: una bomba nascosta in un cestino portarifiuti fu fatta esplodere mentre era in corso una manifestazione contro il terrorismo neofascista, provocando la morte di otto persone e il ferimento di altre centodue.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1974 | Brescia</small>
+                        <a href="catalogoItem/item-7.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/italicus.jpg" class="card-img-top" alt="Strage dell'Italicus">
+                    <div class="card-body">
+                        <h5 class="card-title">Strage Italicus</h5>
+                        <p class="card-text text-muted small">La strage dell'Italicus fu un attentato terroristico neofascista di tipo dinamitardo compiuto nella notte tra il 3 e il 4 agosto 1974 sul treno Italicus, mentre questo transitava presso San Benedetto Val di Sambro, in provincia di Bologna. Nell'attentato morirono 12 persone. È considerato uno dei più gravi attentati verificatisi negli anni di piombo, commesso da gruppi neofascisti e di estrema destra. Per la strage dell'Italicus, come per le altre stragi, furono incriminati come esecutori diversi esponenti del neofascismo italiano, ma l'iter processuale si è concluso con l'assoluzione degli imputati.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1974 | San Benedetto Val di Sambro</small>
+                        <a href="catalogoItem/item-8.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/alcamo.jpg" class="card-img-top" alt="Strage di Alcamo Marina">
+                    <div class="card-body">
+                        <h5 class="card-title">Strage di Alcamo Marina</h5>
+                        <p class="card-text text-muted small">La strage di Alcamo Marina avvenne nella notte tra il 26 e il 27 gennaio 1976 ad Alcamo Marina in provincia di Trapani, all'interno di una stazione carabinieri, quando nella notte due carabinieri vennero assassinati a colpi di arma da fuoco. La strage rimane formalmente un delitto senza colpevoli. L'inchiesta iniziale si è rivelata uno dei più drammatici errori giudiziari della storia d'Italia, costruito su confessioni estorte sotto tortura. Gli originari condannati all'ergastolo sono stati completamente scagionati, dopo oltre venti anni di carcere, e assolti nel 2012.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1976 | Alcamo Marina (TP)</small>
+                        <a href="catalogoItem/item-9.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/moro.jpg" class="card-img-top" alt="Rapimento Moro">
+                    <div class="card-body">
+                        <h5 class="card-title">Rapimento Moro</h5>
+                        <p class="card-text text-muted small">La mattina del 16 marzo 1978, giorno in cui il nuovo governo guidato da Giulio Andreotti stava per essere presentato in Parlamento per ottenere la fiducia, l'auto che trasportava Aldo Moro dalla sua abitazione alla Camera dei deputati fu intercettata e bloccata in via Mario Fani a Roma da un nucleo armato delle Brigate Rosse. In pochi minuti, sparando con armi automatiche, i brigatisti uccisero i due carabinieri a bordo dell'auto di Moro (Oreste Leonardi e Domenico Ricci) e i tre poliziotti che viaggiavano sull'auto di scorta (Raffaele Iozzino, Giulio Rivera e Francesco Zizzi), quindi sequestrarono il presidente della Democrazia Cristiana.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1978 | Roma</small>
+                        <a href="catalogoItem/item-10.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/moro2.jpg" class="card-img-top" alt="Omicidio Moro">
+                    <div class="card-body">
+                        <h5 class="card-title">Omicidio Moro</h5>
+                        <p class="card-text text-muted small">Dopo una prigionia di 55 giorni, durante la quale le Brigate Rosse richiesero invano uno scambio di prigionieri con lo Stato italiano, Moro fu sottoposto a un processo politico da parte del cosiddetto «tribunale del popolo», istituito dalle stesse BR, e quindi ucciso il 9 maggio. Il suo cadavere fu ritrovato quello stesso giorno nel bagagliaio di una Renault 4 rossa parcheggiata a Roma in via Michelangelo Caetani, distante circa 150 metri da via delle Botteghe Oscure, sede nazionale del Partito Comunista Italiano, e circa il doppio da piazza del Gesù, sede nazionale della Democrazia Cristiana.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1978 | Roma</small>
+                        <a href="catalogoItem/item-11.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/bologna.jpg" class="card-img-top" alt="Strage della stazione di Bologna">
+                    <div class="card-body">
+                        <h5 class="card-title">Strage della Stazione di Bologna</h5>
+                        <p class="card-text text-muted small">La strage di Bologna fu un attentato di matrice neofascista e piduista avvenuto sabato 2 agosto 1980 alla stazione Centrale di Bologna. Un ordigno, posto nella sala d'aspetto di seconda classe, esplose provocando la morte di 85 persone e il ferimento di oltre 200. Si tratta dell'attentato terroristico più grave nella storia della Repubblica italiana.Le indagini si indirizzarono quasi subito sulla pista neofascista; ma solo dopo un lungo iter giudiziario e numerosi depistaggi, la sentenza definitiva del 1995 condannò due terroristi del gruppo Nuclei armati rivoluzionari: Valerio Fioravanti e Francesca Mambro, «come appartenenti alla banda armata che ha organizzato e realizzato l'attentato di Bologna». Nel 2007 si aggiunse la condanna di Luigi Ciavardini, minorenne all'epoca dei fatti, e nel 2023 quella di Gilberto Cavallini.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">1980 | Bologna</small>
+                        <a href="catalogoItem/item-12.html" class="btn btn-sm btn-outline-dark">Vedi Scheda</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+     <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="text-warning">Memoria Digitale</h5>
+                    <p class="small text-secondary">Progetto per l'insegnamento di Digital Humanities e Patrimonio Culturale — Università di Bologna.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Open Access & Metadata</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-secondary text-decoration-none" target="_blank"><i class="fa-solid fa-code"></i> Schema Dublin Core (XML)</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none" target="_blank"><i class="fa-solid fa-file-code"></i> Trascrizione TEI P5 (XML)</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none"><i class="fa-solid fa-download"></i> Download Dataset (JSON)</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Istituzione & Credits</h5>
+                    <p class="small text-secondary mb-1">Corso di Laurea Magistrale in Scienze Storiche e Orientalistiche</p>
+                    <p class="small text-secondary">Creator: Lorenzo Brugnati</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center small text-secondary">
+                <p>&copy; Copyright (c) 2026 by Lorenzo Brugnati</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS PER APERTURA CURTAIN NAVBAR -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

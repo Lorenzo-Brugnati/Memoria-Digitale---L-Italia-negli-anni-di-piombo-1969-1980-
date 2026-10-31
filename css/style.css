@@ -1,0 +1,278 @@
+/* Custom Styles per Memoria Digitale */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Hero Slides */
+.hero-slide-1, .hero-slide-2, .hero-slide-3 {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Transitions */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   CURTAIN NAVBAR STYLES
+   ========================================== */
+.curtain-header {
+    background-color: #212529;
+    padding: 15px 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: rgba(26, 29, 32, 0.98);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.overlay a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, 
+.overlay a:focus, 
+.overlay a.active {
+    color: #ffc107;
+}
+
+/* Pulsante di chiusura della Navbar */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #818181;
+}
+
+.overlay .closebtn:hover {
+    color: #ffc107;
+}
+
+.curtain-subitem {
+    font-size: 1.1rem !important;
+    color: #adadad !important;
+    padding-left: 30px !important;
+}
+
+.curtain-divider {
+    width: 200px;
+    margin: 15px auto;
+    border-top: 1px solid #495057;
+}
+
+/* ==========================================
+   TAB GALLERY / EXPANDABLE IMAGE GALLERY
+   ========================================== */
+.gallery-column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.gallery-column img {
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.gallery-column img:hover {
+    opacity: 1;
+}
+
+/* Contenitore per l'immagine ingrandita della gallery (NON usare .container) */
+.gallery-expand-container {
+    position: relative;
+    display: none;
+    background-color: #212529;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* Testo immagine ingrandita */
+#imgtext {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+/* Pulsante chiusura dentro la gallery */
+.gallery-expand-container .closebtn-gallery {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10;
+}
+/* Toglie lo spazio sotto i paragrafi solo nella sezione storia */
+main p {
+    margin-bottom: 0;
+}
+
+/* --- TIMELINE STYLE --- */
+
+/* Il contenitore principale della timeline */
+.timeline-w3 {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* La linea verticale al centro */
+.timeline-w3::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #0d6efd; /* Blu Bootstrap */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Contenitore attorno a ciascun evento */
+.timeline-w3 .container-timeline {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* I cerchietti/pallini sulla linea centrale */
+.timeline-w3 .container-timeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: #ffffff;
+  border: 4px solid #0d6efd;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Posizionamento a sinistra degli eventi dispari */
+.timeline-w3 .left {
+  left: 0;
+}
+
+/* Posizionamento a destra degli eventi pari */
+.timeline-w3 .right {
+  left: 50%;
+}
+
+/* Freccetta rivolta a destra per i blocchi di sinistra */
+.timeline-w3 .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f8f9fa;
+}
+
+/* Freccetta rivolta a sinistra per i blocchi di destra */
+.timeline-w3 .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f8f9fa transparent transparent;
+}
+
+/* Correggi il posizionamento dei pallini per il lato destro */
+.timeline-w3 .right::after {
+  left: -12px;
+}
+
+/* Il rettangolo contenente il testo dell'evento */
+.timeline-w3 .content-box {
+  padding: 20px 30px;
+  background-color: #f8f9fa; /* Sfondo chiaro */
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+/* --- RESPONSIVITÀ PER SCHERMI PICCOLI (Mobile) --- */
+@media screen and (max-width: 767px) {
+  /* Sposta la linea verticale a sinistra */
+  .timeline-w3::after {
+    left: 31px;
+  }
+
+  /* I contenitori occupano il 100% della larghezza */
+  .timeline-w3 .container-timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Azzera i posizionamenti di destra/sinistra su mobile */
+  .timeline-w3 .left, 
+  .timeline-w3 .right {
+    left: 0%;
+  }
+
+  /* Tutte le freccette puntano a sinistra */
+  .timeline-w3 .container-timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f8f9fa transparent transparent;
+  }
+
+  /* Tutti i pallini si allineano sulla linea a sinistra */
+  .timeline-w3 .left::after, 
+  .timeline-w3 .right::after {
+    left: 18px;
+  }
+}

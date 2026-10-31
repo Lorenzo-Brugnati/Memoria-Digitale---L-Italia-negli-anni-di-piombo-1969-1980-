@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+
+  <dc:title>Intervista di Sergio Zavoli a Vincenzo Vinciguerra per il programma La notte della Repubblica</dc:title>
+  <dc:creator>Sergio Zavoli</dc:creator>
+  <dc:subject>Strage di Peteano</dc:subject>
+  <dc:subject>Sagrado</dc:subject>
+  <dc:subject>Autobomba</dc:subject>
+  <dc:subject>Carabinieri</dc:subject>
+  <dc:subject>Fiat 500</dc:subject>
+  <dc:description>Estratto dell'intervista sulla strage di Peteano a Vincenzo Vinciguerra dal giornalista Sergio Zavoli per il programma La notte della Repubblica mandato in onda su Rai 2 nel 1990.</dc:description>
+  <dc:publisher>Rai 2</dc:publisher>
+  <dc:contributor>Il canto della storia (https://www.youtube.com/@IlcantodellaStoria)</dc:contributor>
+  <dc:date>31 gennaio 1990</dc:date>
+  <dc:type>MovingImage</dc:type>
+  <dc:format>video/mp4</dc:format>
+  <dc:identifier>https://youtu.be/tdqyNo3RTPQ</dc:identifier>
+  <dc:source>Youtube-Il canto della storia</dc:source>
+  <dc:language>ita</dc:language>
+  <dc:coverage>carcere di Sollacciano, Firenze</dc:coverage>
+  <dc:rights>Tutti i diritti riservati agli eredi o agli aventi diritto delle rispettive testate giornalistiche. Riproduzione ad uso esclusivamente didattico e scientifico (Art. 70 L. 633/1941).</dc:rights>
+
+  <dcterms:references>http://viaf.org/viaf/18844066</dcterms:references>
+  <dcterms:spatial>https://www.geonames.org/3176959/florence.html</dcterms:spatial>
+</metadata>

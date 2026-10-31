@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+
+  <dc:title>Documentario sulla strage di Alcamo Marina</dc:title>
+  <dc:creator>Comune di Alcamo Marina</dc:creator>
+  <dc:subject>Strage di Alcamo Marina</dc:subject>
+  <dc:subject>Arma da fuoco</dc:subject>
+  <dc:subject>Carabinieri</dc:subject>
+  <dc:subject>Assassinio</dc:subject>
+  <dc:subject>Delitto senza colpevoli</dc:subject>
+  <dc:description>Documentario sulla strage di Alcamo Marina del 26-27 gennaio 1976, gli intrecci tra mafia, servizi segreti e la Gladio trapanese, le indagini dei magistrati e le rivelazioni dei pentiti di mafia, le dichiarazioni dei vertici Gladio nazionali e le ripercussioni dell'organizzazione Gladio Stay Behind in italia.</dc:description>
+  <dc:publisher>Comune di Alcamo Marina</dc:publisher>
+  <dc:contributor>Canale Youtube del comune di Alcamo Marina</dc:contributor>
+  <dc:date>4 marzo 2014</dc:date>
+  <dc:type>MovingImage</dc:type>
+  <dc:format>video/mp4</dc:format>
+  <dc:identifier>https://youtu.be/5E8CAzlMbK0</dc:identifier>
+  <dc:source>Youtube-Alcamo Marina</dc:source>
+  <dc:language>ita</dc:language>
+  <dc:coverage>Alcamo Marina, Italia</dc:coverage>
+  <dc:rights>Tutti i diritti riservati agli eredi o agli aventi diritto delle rispettive testate giornalistiche. Riproduzione ad uso esclusivamente didattico e scientifico (Art. 70 L. 633/1941).</dc:rights>
+
+  <dcterms:references>http://viaf.org/viaf/306358415</dcterms:references>
+  <dcterms:spatial>https://www.geonames.org/6559421/alcamo-marina.html</dcterms:spatial>
+</metadata>

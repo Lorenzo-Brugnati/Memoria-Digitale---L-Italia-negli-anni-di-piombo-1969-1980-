@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+
+  <dc:title>Strage della Stazione di Bologna</dc:title>
+  <dc:creator>Tg3</dc:creator>
+  <dc:subject>Strage della Stazione di Bologna</dc:subject>
+  <dc:subject>Ordigno</dc:subject>
+  <dc:subject>più grave</dc:subject>
+  <dc:subject>Sala d'aspetto</dc:subject>
+  <dc:subject>Nuclei Armati Rivoluzionari (NAR)</dc:subject>
+  <dc:description>Uno dei primi servizi del Tg3 che aggiorna sui fatti della strage</dc:description>
+  <dc:publisher>Tg3</dc:publisher>
+  <dc:contributor>Archivio Rai</dc:contributor>
+  <dc:date>2 agosto 1980</dc:date>
+  <dc:type>MovingImage</dc:type>
+  <dc:format>video/mp4</dc:format>
+  <dc:identifier>https://youtu.be/tMckRRcFXec</dc:identifier>
+  <dc:source>Archivi Rai</dc:source>
+  <dc:language>ita</dc:language>
+  <dc:coverage>Roma, Italia</dc:coverage>
+  <dc:rights>Tutti i diritti riservati agli eredi o agli aventi diritto delle rispettive testate giornalistiche. Riproduzione ad uso esclusivamente didattico e scientifico (Art. 70 L. 633/1941).</dc:rights>
+
+  <dcterms:references>http://viaf.org/viaf/266077830</dcterms:references>
+  <dcterms:spatial>https://www.geonames.org/3169070/rome.html</dcterms:spatial>
+</metadata>

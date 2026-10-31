@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+
+  <dc:title>Prima pagina del Paese sera del 29 maggio 1974</dc:title>
+  <dc:creator>Paese sera</dc:creator>
+  <dc:subject>Strage di Piazza della Loggia</dc:subject>
+  <dc:subject>Brescia</dc:subject>
+  <dc:subject>Bomba</dc:subject>
+  <dc:subject>Neofascista</dc:subject>
+  <dc:subject>Cestino portarifiuti</dc:subject>
+  <dc:description>Prima pagina del Paese sera del 29 maggio 1974 in cui viene mostrata la prima pista che si tentò di approfondire.</dc:description>
+  <dc:publisher>Paese sera</dc:publisher>
+  <dc:contributor>Rete degli archivi</dc:contributor>
+  <dc:date>29 maggio 1974</dc:date>
+  <dc:type>Text</dc:type>
+  <dc:format>image/jpg</dc:format>
+  <dc:identifier>0031-0166:1974-05-29:p1</dc:identifier>
+  <dc:source>Paese sera</dc:source>
+  <dc:language>ita</dc:language>
+  <dc:coverage>Roma, Italia</dc:coverage>
+  <dc:rights>Tutti i diritti riservati agli eredi o agli aventi diritto delle rispettive testate giornalistiche. Riproduzione ad uso esclusivamente didattico e scientifico (Art. 70 L. 633/1941).</dc:rights>
+
+  <dcterms:references>http://viaf.org/viaf/120912272</dcterms:references>
+  <dcterms:spatial>https://www.geonames.org/3169070/rome.html</dcterms:spatial>
+</metadata>

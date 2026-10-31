@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Digitale | L'Italia negli anni di piombo (1969-1980)</title>
+
+    <!-- Metadati Dublin Core (DC) per l'Head -->
+    <meta name="DC.Title" content="Memoria Digitale: Le stragi dell'Italia degli anni di piombo (1969-1980)">
+    <meta name="DC.Creator" content="Lorenzo Brugnati">
+    <meta name="DC.Subject" content="Anni di piombo; Stragi di Stato; Storia contemporanea italiana; Digital Humanities; Fonti d'archivio">
+    <meta name="DC.Description" content="Collezione digitale geostorica e multidisciplinare per la metadatazione, conservazione e valorizzazione delle fonti primarie sulle stragi in Italia (1969-1980).">
+    <meta name="DC.Publisher" content="Università di Bologna / DH.arc">
+    <meta name="DC.Date" content="2026">
+    <meta name="DC.Type" content="Interactive Resource">
+    <link name="DC.Identifier" content="https://www.nomedelsitoweb.github.io/">
+    <meta name="DC.Format" content="HTML/CSS/JS">
+    <meta name="DC.Source" content="Archivio di Stato, Archivio storico del Corriere della Sera, Archivio storico di Paese Sera, Archivio storico de La Repubblica, Archivio storico Rai, Youtube">
+    <meta name="DC.Relation" content="Collezione di item digitali relativi all'Italia degli anni di piombo (1969-1980), repertorio di autorità VIAF e geonames per identificare persone e luoghi e repository Github del progetto">
+    <meta name="DC.Coverage" content="Italia (1969-1980)">
+    <meta name="DC.Language" content="it">
+    <meta name="DC. rights" content="CC BY 4.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome per Icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stile personalizzato -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- STICKY HEADER CON INTESTAZIONE E TRIGGER CURTAIN NAVBAR bootstrap 1 -->
+    <header class="curtain-header sticky-top border-bottom border-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold text-warning m-0 text-wrap" href="index.html" style="max-width: 80%;">
+                <i class="fa-solid fa-landmark me-2"></i>Memoria Digitale | L'Italia negli anni di piombo (1969-1980)
+            </a>
+            <button class="btn btn-outline-warning" onclick="openNav()" aria-label="Apri Menu">
+                <i class="fa-solid fa-bars fa-lg me-1"></i> Menu
+            </button>
+        </div>
+    </header>
+
+    <!-- STRUTTURA CURTAIN OVERLAY -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <div class="overlay-content">
+            <a class="active" href="index.html" onclick="closeNav()"><i class="fa-solid fa-house me-2"></i>Home</a>
+            <a href="index.html" onclick="closeNav()"><i class="fa-solid fa-book-open me-2"></i>Introduzione</a>
+            
+            <div class="curtain-divider"></div>
+            
+            <span class="text-warning text-uppercase small fw-bold tracking-wide">Catalogo & Esplora</span>
+            <a href="catalogo.html" class="curtain-subitem" onclick="closeNav()"><i class="fa-solid fa-boxes-stacked me-2"></i>Tutti gli Item</a>
+            <a href="luoghi.html" class="curtain-subitem" onclick="closeNav()"><i class="fa-solid fa-map-location-dot me-2"></i>Mappa</a>
+            <a href="date.html" class="curtain-subitem" onclick="closeNav()"><i class="fa-solid fa-timeline me-2"></i>Cronologia</a>
+            
+            <div class="curtain-divider"></div>
+
+            <a href="#" onclick="closeNav()"><i class="fa-solid fa-users me-2"></i>Persone</a>
+            <a href="#" onclick="closeNav()"><i class="fa-solid fa-tags me-2"></i>Temi</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container my-5">
+
+        <!-- GALLERIA DI IMMAGINI bootstrap 2 (Inizio Sezione Gallery) -->
+        <section class="mb-5">
+            <h3 class="fw-bold mb-3"><i class="fa-solid fa-images text-warning me-2"></i>Galleria Fotografica</h3>
+            <div class="row">
+                <div class="gallery-column">
+                    <img src="img/Anni_di_piombo1.jpg" alt="Autunno caldo (1969-1970)" class="img-fluid" onclick="myFunction(this);">
+                </div>
+                <div class="gallery-column">
+                    <img src="img/Anni_di_piombo2.jpg" alt="Strage di Piazza Fontana (1969)" class="img-fluid" onclick="myFunction(this);">
+                </div>
+                <div class="gallery-column">
+                    <img src="img/Anni_di_piombo3.jpg" alt="Strage di Bologna (1980)" class="img-fluid" onclick="myFunction(this);">
+                </div>
+                <div class="gallery-column">
+                    <img src="img/Anni_di_piombo4.jpg" alt="Strage di Piazza della Loggia (1974)" class="img-fluid" onclick="myFunction(this);">
+                </div>
+            </div>
+
+            <!-- Contenitore immagine Ingrandita -->
+            <div class="gallery-expand-container" id="galleryContainer">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn-gallery">&times;</span>
+                <img id="expandedImg" style="width:100%" class="rounded">
+                <div id="imgtext"></div>
+            </div>
+        </section>
+
+        <!-- Sezione Presentazione del Progetto -->
+        <section class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="fw-bold border-bottom pb-2">Il Progetto Memoria Digitale</h2>
+                <p class="lead text-muted mt-3">
+                    L’idea del progetto <strong><em>Memoria Digitale</em></strong> è ricostruire una parte della storia d'Italia durante gli anni di piombo (1969-1980) attraverso una collezione digitale di <em>fonti eterogenee</em>, organizzate <em>semanticamente</em> e <em>geolocalizzate</em>, permettendo all’utente di esplorare eventi, luoghi, persone, date, temi e documenti. Lo studio di risorse documentarie permette non solo di <em>ricostruire la storia del nostro paese</em> fortemente segnato da atti terroristici, ma permette anche di <strong><em>ricordare</em></strong> eventi, scontri e soprattutto le vittime, spesso dimenticate, di questi attacchi. 
+                    L'obiettivo finale del progetto per il corso di <strong><em>Digital Humanities</em></strong> dell'Università di Bologna è quello di <em>ricordare</em>, andando a creare una memoria digitale che possa essere collettiva e mettere in relazioni non solo informazioni e fonti diverse ma anche persone.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sezione Modalità di Navigazione --><!--bootstrap-->
+        <section class="my-5">
+            <h3 class="text-center fw-bold mb-4">Modalità di Esplorazione del Catalogo</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-list-ul fa-3x text-warning mb-3"></i>
+                            <h4 class="card-title">Catalogo Generale</h4>
+                            <p class="card-text text-muted">Esplora la lista completa degli item.</p>
+                            <a href="catalogo.html" class="btn btn-outline-dark btn-sm">Consulta la Lista</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-map-location-dot fa-3x text-warning mb-3"></i>
+                            <h4 class="card-title">Mappa</h4>
+                            <p class="card-text text-muted">Naviga la collezione attraverso la geolocalizzazione dei luoghi degli eventi storici.</p>
+                            <a href="luoghi.html" class="btn btn-outline-dark btn-sm">Esplora la Mappa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-clock-rotate-left fa-3x text-warning mb-3"></i>
+                            <h4 class="card-title">Cronologia</h4>
+                            <p class="card-text text-muted">Ripercorri gli eventi e le relative fonti primarie lungo una linea del tempo interattiva.</p>
+                            <a href="date.html" class="btn btn-outline-dark btn-sm">Vedi la Timeline</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Entità Relazionate -->
+        <section class="bg-light p-4 rounded shadow-sm text-center my-5">
+            <h4 class="fw-bold mb-3"> <strong>IN RILIEVO</strong></h4>
+            <p class="text-muted">Ricerca rapida per campi di interesse</p>
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <a href="#" class="badge bg-secondary text-decoration-none p-2 fs-6">Interviste</a>
+                <a href="#" class="badge bg-secondary text-decoration-none p-2 fs-6">Stragi di Stato</a>
+                <a href="#" class="badge bg-secondary text-decoration-none p-2 fs-6">Atti giudiziari</a>
+                <a href="#" class="badge bg-secondary text-decoration-none p-2 fs-6">Responsabili</a>
+                <a href="#" class="badge bg-secondary text-decoration-none p-2 fs-6">Atti Parlamentari</a>
+                <a href="#" class="badge bg-secondary text-decoration-none p-2 fs-6">Vittime e Associazioni per la memoria</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="text-warning">Memoria Digitale</h5>
+                    <p class="small text-secondary">Progetto per l'insegnamento di Digital Humanities e Patrimonio Culturale — Università di Bologna.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Open Access & Metadata</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-secondary text-decoration-none" target="_blank"><i class="fa-solid fa-code"></i> Schema Dublin Core (XML)</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none" target="_blank"><i class="fa-solid fa-file-code"></i> Trascrizione TEI P5 (XML)</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none"><i class="fa-solid fa-download"></i> Download Dataset (JSON)</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Istituzione & Credits</h5>
+                    <p class="small text-secondary mb-1">Corso di Laurea Magistrale in Scienze Storiche e Orientalistiche</p>
+                    <p class="small text-secondary">Creator: Lorenzo Brugnati</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center small text-secondary">
+                <p>&copy; Copyright (c) 2026 by Lorenzo Brugnati</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Funzione per la Curtain Navbar
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        // Funzione per la Expandable Image Gallery
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            document.getElementById("galleryContainer").style.display = "block";
+        }
+    </script>
+</body>
+</html>

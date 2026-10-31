@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Geostorica | Memoria Digitale</title>
+    
+    <!-- Bootstrap 5 & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS (Tool DH per Mappe Interattive) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+
+    <style>
+        /* CSS essenziale per prevenire il blocco visivo di Leaflet */
+        #map {
+            height: 550px !important;
+            width: 100% !important;
+            position: relative !important;
+            z-index: 1 !important;
+            background-color: #e5e3df; /* Colore neutro di caricamento */
+        }
+        .leaflet-container img {
+            max-width: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY HEADER CON INTESTAZIONE E TRIGGER CURTAIN NAVBAR -->
+    <header class="curtain-header sticky-top border-bottom border-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold text-warning m-0 text-wrap" href="index.html" style="max-width: 80%;">
+                <i class="fa-solid fa-landmark me-2"></i>Memoria Digitale | L'Italia negli anni di piombo (1969-1980)
+            </a>
+            <button class="btn btn-outline-warning" onclick="openNav()" aria-label="Apri Menu">
+                <i class="fa-solid fa-bars fa-lg me-1"></i> Menu
+            </button>
+        </div>
+    </header>
+
+    <!-- STRUTTURA CURTAIN OVERLAY -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <div class="overlay-content">
+            <a href="index.html" onclick="closeNav()"><i class="fa-solid fa-house me-2"></i>Home</a>
+            <a href="introduzione.html" onclick="closeNav()"><i class="fa-solid fa-book-open me-2"></i>Introduzione</a>
+            
+            <div class="curtain-divider"></div>
+            
+            <span class="text-warning text-uppercase small fw-bold tracking-wide">Catalogo & Esplora</span>
+            <a href="catalogo.html" class="curtain-subitem" onclick="closeNav()"><i class="fa-solid fa-boxes-stacked me-2"></i>Tutti gli Item</a>
+            <a class="active curtain-subitem" href="luoghi.html" onclick="closeNav()"><i class="fa-solid fa-map-location-dot me-2"></i>Mappa</a>
+            <a href="date.html" class="curtain-subitem" onclick="closeNav()"><i class="fa-solid fa-timeline me-2"></i>Cronologia</a>
+            
+            <div class="curtain-divider"></div>
+
+            <a href="#" onclick="closeNav()"><i class="fa-solid fa-users me-2"></i>Persone</a>
+            <a href="#" onclick="closeNav()"><i class="fa-solid fa-tags me-2"></i>Temi</a>
+        </div>
+    </div>
+
+    <!-- CONTAINER MAPPA -->
+    <main class="container my-5">
+        <div class="row mb-4">
+            <div class="col-lg-12">
+                <h1 class="fw-bold"><i class="fa-solid fa-map-location-dot text-warning"></i> Mappa degli eventi</h1>
+                <p class="lead text-muted">Mappa geostorica delle stragi e degli eventi rilevanti avvenuti in Italia tra il 1969 e il 1980.</p>
+            </div>
+        </div>
+
+        <!-- Mappa Leaflet -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="map" class="shadow-sm border rounded"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="text-warning">Memoria Digitale</h5>
+                    <p class="small text-secondary">Progetto per l'insegnamento di Digital Humanities e Patrimonio Culturale — Università di Bologna.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Open Access & Metadata</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-secondary text-decoration-none" target="_blank"><i class="fa-solid fa-code"></i> Schema Dublin Core (XML)</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none" target="_blank"><i class="fa-solid fa-file-code"></i> Trascrizione TEI P5 (XML)</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none"><i class="fa-solid fa-download"></i> Download Dataset (JSON)</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Istituzione & Credits</h5>
+                    <p class="small text-secondary mb-1">Corso di Laurea Magistrale in Scienze Storiche e Orientalistiche</p>
+                    <p class="small text-secondary">Creator: Lorenzo Brugnati</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center small text-secondary">
+                <p>&copy; Copyright (c) 2026 by Lorenzo Brugnati</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIBRERIE JAVASCRIPT -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCRIPTS PER APERTURA CURTAIN NAVBAR -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+    <!-- Script di Inizializzazione con Nuova Sorgente (Esri Topo Map) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Risolve eventuali problemi di caricamento delle icone dei pin da CDN
+            delete L.Icon.Default.prototype._getIconUrl;
+            L.Icon.Default.mergeOptions({
+                iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
+                iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+            });
+
+            // Inizializza la mappa centrata sull'Italia Nord-Centro
+            var map = L.map('map').setView([43.5000, 12.0000], 6);
+
+            // NUOVA SORGENTE GRATUITA E STABILE: Esri World Topo Map
+            // Funziona sia in locale che online, non richiede API Key e non subisce blocchi
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+                maxZoom: 19,
+                attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+            }).addTo(map);
+
+            // Forza il ricalcolo dimensionale per visualizzare subito la mappa completa
+            setTimeout(function() {
+                map.invalidateSize();
+            }, 300);
+
+            // Dataset geostorico delle stragi (invariato)
+            var eventiGeografici = [
+                {
+                    titolo: "Strage di Piazza Fontana",
+                    luogo: "Milano, Piazza Fontana",
+                    coords: [45.46359239284939, 9.194253896313066],
+                    anno: "12 dicembre 1969",
+                    link: "catalogoItem/item-1.html",
+                    descrizione: "Detonazione di un ordigno nella sede della Banca Nazionale dell'Agricoltura che causò 17 morti e 88 feriti."
+                },
+                {
+                    titolo: "Strage di Gioia Tauro",
+                    luogo: "Gioia Tauro, nei pressi della Stazione di Gioia Tauro",
+                    coords: [38.43036966833401, 15.896572604607137],
+                    anno: "22 luglio 1970",
+                    link: "catalogoItem/item-2.html",
+                    descrizione: "Esplosione di un ordigno sui binari del treno che causò il deragliamento del direttissimo Freccia del Sud."
+                },
+                {
+                    titolo: "Golpe Borghese",
+                    luogo: "Roma, Ministero dell'Interno",
+                    coords: [41.899557926695266, 12.493824982412931],
+                    anno: "7-8 dicembre 1970",
+                    link: "catalogoItem/item-3.html",
+                    descrizione: "Tentato colpo di stato di estrema destra ideato da Junio Valerio Borghese, ex comandante della Xª MAS."
+                },
+                {
+                    titolo: "Omicidio Calabresi",
+                    luogo: "Milano, via Cherubini",
+                    coords: [45.4670389311979, 9.159520967477615],
+                    anno: "17 maggio 1972",
+                    link: "catalogoItem/item-4.html",
+                    descrizione: "Omicidio del commissario Luigi Calabresi per mano di alcuni esponenti di Lotta Continua."
+                },
+                {
+                    titolo: "Strage di Peteano",
+                    luogo: "Peteano, Provincia di Sagrado (Gorizia)",
+                    coords: [45.87738732654421, 13.485378904319088],
+                    anno: "31 maggio 1972",
+                    link: "catalogoItem/item-5.html",
+                    descrizione: "Esplosione di una Fiat 500 bianca con 2 fori di proiettile. Provocò la morte di tre carabinieri e il ferimento di altri due."
+                },
+                {
+                    titolo: "Strage della questura di Milano",
+                    luogo: "Milano, palazzo della questura di Milano",
+                    coords: [45.473266770895805, 9.192117309806683],
+                    anno: "17 maggio 1973",
+                    link: "catalogoItem/item-6.html",
+                    descrizione: "Attacco terroristico per mano di Gianfranco Bertoli. Persero la vita 4 persone e 52 rimasero ferite."
+                },
+                {
+                    titolo: "Strage di Piazza della Loggia",
+                    luogo: "Brescia, Piazza della Loggia",
+                    coords: [45.5399722779013, 10.219959282824357],
+                    anno: "28 maggio 1974",
+                    link: "catalogoItem/item-7.html",
+                    descrizione: "Attentato terroristico di matrice neofascista compiuto il 28 maggio 1974 a Brescia. Morirono 9 persone e i feriti furono centodue."
+                },
+                {
+                    titolo: "Strage dell'Italicus",
+                    luogo: "San Benedetto Val di Sambro (BO)",
+                    coords: [44.216386, 11.189242],
+                    anno: "3-4 agosto 1974",
+                    link: "catalogoItem/item-8.html",
+                    descrizione: "Attentato terroristico neofascista di tipo dinamitardo compiuto sul treno Italicus. Nell'attentato morirono 12 persone."
+                },
+                {
+                    titolo: "Strage di Alcamo Marina",
+                    luogo: "Alcamo Marina, provincia di Trapani",
+                    coords: [38.028200003988196, 12.93246198189513],
+                    anno: "26-27 gennaio 1976",
+                    link: "catalogoItem/item-9.html",
+                    descrizione: "Omicidio a colpi di arma da fuoco di due carabinieri all'interno della stazione locale dei carabinieri."
+                },
+                {
+                    titolo: "Rapimento Moro",
+                    luogo: "Roma, via Fani",
+                    coords: [41.93786314600068, 12.44133915378798],
+                    anno: "16 marzo 1978",
+                    link: "catalogoItem/item-10.html",
+                    descrizione: "Le Brigate Rosse rapiscono l'onorevole Aldo Moro e uccidono i suoi cinque agenti di scorta."
+                },
+                {
+                    titolo: "Omicidio Moro",
+                    luogo: "Roma, via Caetani",
+                    coords: [41.89406224856999, 12.478395130771716],
+                    anno: "9 maggio 1978",
+                    link: "catalogoItem/item-11.html",
+                    descrizione: "Moro viene assassinato e il suo corpo viene ritrovato nel bagagliaio di una Renault 4 in via Caetani."
+                },
+                {
+                    titolo: "Strage della Stazione di Bologna",
+                    luogo: "Bologna, Stazione Centrale",
+                    coords: [44.506032253961024, 11.342602638587008],
+                    anno: "2 agosto 1980",
+                    link: "catalogoItem/item-12.html",
+                    descrizione: "Ordigno a tempo detona nella sala d'aspetto della Stazione Centrale. Con 85 vittime e 200 feriti è il più grave atto terroristico della storia repubblicana."
+                }
+            ];
+
+            // Ciclo per posizionare i pin (Marker) sulla mappa
+            eventiGeografici.forEach(function(ev) {
+                var popupContent = `
+                    <div class="p-1">
+                        <h6 class="fw-bold mb-1">${ev.titolo}</h6>
+                        <p class="small text-muted mb-1"><strong>Data:</strong> ${ev.anno}<br><strong>Luogo:</strong> ${ev.luogo}</p>
+                        <p class="small mb-2">${ev.descrizione}</p>
+                        <a href="${ev.link}" class="btn btn-warning btn-sm text-dark fw-bold w-100">Vedi Fonti Collegate</a>
+                    </div>
+                `;
+                L.marker(ev.coords).addTo(map).bindPopup(popupContent);
+            });
+        });
+    </script>
+</body>
+</html>

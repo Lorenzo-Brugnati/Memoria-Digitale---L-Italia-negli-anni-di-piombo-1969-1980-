@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+
+  <dc:title>Intervista al macchinista dell'Italicus Luigi Pavesi per l'emittente televisiva TVL</dc:title>
+  <dc:creator>TVL-Marta Quilici</dc:creator>
+  <dc:subject>Strage dell'Italicus</dc:subject>
+  <dc:subject>Treno</dc:subject>
+  <dc:subject>Val di Sambro</dc:subject>
+  <dc:subject>Neofascismo</dc:subject>
+  <dc:subject>Attentato dinamitardo</dc:subject>
+  <dc:description>Estratto dell'intervista a Luigi Pavesi sul disastro del treno Italicus andato in onda nel 2025 per la rete toscana TVL.</dc:description>
+  <dc:publisher>TVL</dc:publisher>
+  <dc:contributor>Canale Youtube di TVL</dc:contributor>
+  <dc:date>16 gennaio 2025</dc:date>
+  <dc:type>MovingImage</dc:type>
+  <dc:format>video/mp4</dc:format>
+  <dc:identifier>https://youtu.be/xLn47NXPycM</dc:identifier>
+  <dc:source>Youtube-TVL</dc:source>
+  <dc:language>ita</dc:language>
+  <dc:coverage>Firenze, Italia</dc:coverage>
+  <dc:rights>Tutti i diritti riservati agli eredi o agli aventi diritto delle rispettive testate giornalistiche. Riproduzione ad uso esclusivamente didattico e scientifico (Art. 70 L. 633/1941).</dc:rights>
+
+  <dcterms:spatial>https://www.geonames.org/3176959/florence.html</dcterms:spatial>
+</metadata>
