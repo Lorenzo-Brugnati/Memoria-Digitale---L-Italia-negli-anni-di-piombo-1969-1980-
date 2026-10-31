@@ -33,45 +33,23 @@ Quali sono i file principali?
 
 Di seguito viene illustrata la struttura organizzativa della repository GitHub e il ruolo di ciascun file e cartella del progetto:
 
-.
-├── index.html              # Homepage e introduzione metodologica al progetto
-├── catalogo.html           # Pagina principale del catalogo con la griglia dei 12 item
-├── luoghi.html             # Sezione geografica con mappa interattiva Leaflet
-├── date.html               # Sezione cronologica con la linea del tempo degli eventi
-├── README.md               # Documentazione e guida al progetto (questo file)
-│
-├── css/
-│   └── style.css           # Foglio di stile personalizzato del sito web
-│
-├── js/
-│   └── main.js             # Logica in JavaScript vanilla (interazioni UI e mappa)
-│
-├── img/
-│   ├── favicon.png         # Icona del sito
-│   └── (immagini e anteprime generali)
-│
-├── Item/                   # Media repository locale (immagini e video MP4)
-│   ├── item1.jpg           # Immagini ad alta risoluzione degli item
-│   ├── gioiatauro.mp4      # Filmati e documentari d'archivio
-│   └── ...
-│
-├── xml/                    # File di codifica e metadati XML/Dublin Core/TEI P5
-│   ├── item-1-dc.xml       # Tracciati XML Dublin Core
-│
-└── catalogoItem/           # Sottocartella contenente le schede analitiche dei singoli item
-    ├── item-1.html         # Scheda: Strage di Piazza Fontana
-    ├── item-2.html         # Scheda: Strage di Gioia Tauro
-    ├── item-3.html         # Scheda: Golpe Borghese
-    ├── item-4.html         # Scheda: Omicidio Luigi Calabresi
-    ├── item-5.html         # Scheda: Strage di Peteano
-    ├── item-6.html         # Scheda: Strage della Questura di Milano
-    ├── item-7.html         # Scheda: Strage di Piazza della Loggia
-    ├── item-8.html         # Scheda: Strage dell'Italicus
-    ├── item-9.html         # Scheda: Strage di Alcamo Marina
-    ├── item-10.html        # Scheda: Rapimento Moro
-    ├── item-11.html        # Scheda: Omicidio Moro
-    └── item-12.html        # Scheda: Strage della Stazione di Bologna
+index.html---->Homepage e introduzione metodologica al progetto
+catalogo.html---->Pagina principale del catalogo con la griglia dei 12 item
+luoghi.html---->Sezione geografica con mappa interattiva Leaflet
+date.html---->Sezione cronologica con la linea del tempo degli eventi
+README.md---->Documentazione e guida al progetto (questo file)
 
+css/style.css---->Foglio di stile personalizzato del sito web
+    
+js/main.js---->Logica in JavaScript vanilla (interazioni UI e mappa)
+
+img/icona del sitoimmagini e anteprime generali
+
+Item---->Repository locale di file multimediali
+
+xml---->File di codifica e metadati XML/Dublin Core/TEI P5 per ogni Item analizzato
+
+catalogoItem---->Sottocartella contenente le schede analitiche dei 12 singoli item
 
 
 Le funzionalità principali
