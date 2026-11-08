@@ -128,7 +128,7 @@
         }
     </script>
 
-    <!-- Script di Inizializzazione con Nuova Sorgente (Esri Topo Map) -->
+    <!-- Script di Inizializzazione -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Risolve eventuali problemi di caricamento delle icone dei pin da CDN
@@ -142,8 +142,6 @@
             // Inizializza la mappa centrata sull'Italia Nord-Centro
             var map = L.map('map').setView([43.5000, 12.0000], 6);
 
-            // NUOVA SORGENTE GRATUITA E STABILE: Esri World Topo Map
-            // Funziona sia in locale che online, non richiede API Key e non subisce blocchi
             L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
                 maxZoom: 19,
                 attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
@@ -154,7 +152,7 @@
                 map.invalidateSize();
             }, 300);
 
-            // Dataset geostorico delle stragi (invariato)
+            // Dataset geostorico delle stragi
             var eventiGeografici = [
                 {
                     titolo: "Strage di Piazza Fontana",
